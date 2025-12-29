@@ -1,0 +1,64 @@
+<section id="hero" class="relative overflow-hidden py-24 md:py-32">
+    <div class="bg-grid-pattern absolute inset-0 opacity-5"></div>
+    <div class="absolute inset-0 bg-linear-to-b from-primary/5 to-transparent"></div>
+
+    <div class="relative z-10 container">
+        <div class="flex flex-col items-center gap-8 text-center">
+            <div in:fly={{y: 50, duration: 500, delay: 200}}>
+                <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                    Build Beautiful UIs with <span
+                        class="bg-linear-to-r from-primary to-primary-foreground bg-clip-text text-transparent"
+                        >Svelte</span
+                    >
+                </h1>
+                <p class="mx-auto mt-6 max-w-[700px] text-lg text-muted-foreground md:text-xl">
+                    Create stunning web applications using Svelte 5, shadcn-svelte, and Tailwind CSS
+                    4. Fast, responsive, and beautiful by default.
+                </p>
+            </div>
+
+            <div in:fade={{delay: 700}}>
+                <HeroCTA />
+            </div>
+
+            <div
+                class="mt-12 w-full max-w-4xl overflow-hidden rounded-lg border bg-card/50 shadow-xl backdrop-blur-sm"
+                in:fade={{delay: 900}}
+            >
+                <div class="relative">
+                    <div
+                        class="absolute top-0 right-0 left-0 flex h-8 items-center space-x-2 bg-muted px-4"
+                    >
+                        <div class="size-3 rounded-full bg-red-500"></div>
+                        <div class="size-3 rounded-full bg-yellow-500"></div>
+                        <div class="size-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <pre class="language-svelte overflow-x-auto p-4 pt-12 text-sm">
+                        <code class="language-svelte">{code_example}</code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+import {fade, fly} from 'svelte/transition'
+
+import HeroCTA from './hero-cta.svelte'
+
+// Code example to display
+const code_example = `                                                                        <script>
+                                       import { Button } from "$lib/components/ui/button/index.js"
+                                                                                              </ script>
+                                                                                <Button>Button</Button>`
+</script>
+
+<style>
+.bg-grid-pattern {
+    background-image:
+        linear-gradient(to right, rgba(var(--foreground-rgb), 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(var(--foreground-rgb), 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+</style>

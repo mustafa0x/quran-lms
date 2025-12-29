@@ -1,0 +1,76 @@
+﻿I. Student Progress Reports:
+1. Individual Student Progress Report:
+   * Content: Current Juz/Surah/Ayah being memorized, total memorized (Juz/Surahs/Ayahs), number of new Ayahs/Surahs memorized per week/month, average memorization rate, last revision date, next revision due date, performance on recent tests/recitations, challenges identified.
+   * Purpose: Provides a comprehensive overview of a single student's journey, helps identify areas needing focus.
+2. Memorization Milestone Report:
+   * Content: List of students who have completed a certain Juz, a specific Surah, or a certain percentage of the Quran.
+   * Purpose: Celebrates achievements, motivates students, and identifies those ready for advanced stages.
+3. Revision Status Report:
+   * Content: List of students due for revision, overdue for revision, and those who have recently completed a revision. Can include the specific Surahs/Juz to be revised. Murajah work needs to be recycled every 5-10 days. Our current schedule is 
+1-2 juz memorized .25 juz for muraja a day
+3-6 juz memorized .5 juz for muraja a day
+6-10 juz memorized 1 juz fo muraja a day
+11-15 memorized 1.5 juz for muraja
+16-20 memorized 2 juz for muraja
+21-25 juz memrozied 2.5 juz for muraja
+26-30 juz memorized 3 juz for muraja
+
+
+Also, we have weeks where a child does not do any new. They strengthen their juz’s as follows:
+student finishes 5 Juz, they will do  Muraja'a for 1 week.
+student finishes 10 Juz, they will only do Muraja'a for 2 weeks
+student finishes 15 Juz, they will do Muraja'a for 3 weeks.
+student finishes 20 Juz, they will do Muraja'a for 4 weeks.
+student finishes 25 Juz, they will do Muraja'a for 5 weeks.
+student finishes 30 Juz (the entire Quran), they will do Muraja'a for 6 weeks.
+
+
+   * Purpose: Ensures consistent revision, crucial for strong memorization retention.
+
+
+4. Performance Trend Report:
+   * Content: Graph/chart showing a student's memorization progress over time (e.g., Ayahs memorized per week).
+   * Purpose: Visualizes progress, helps identify plateaus or improvements.
+II. Group/Class Reports:
+1. Class/Group Progress Overview:
+   * Content: Summary of memorization progress for an entire class or group – average memorization per student, number of students at different stages (e.g., how many have completed 5 Juz, 10 Juz, etc.).
+   * Purpose: Provides teachers/administrators with a high-level view of the group's performance.
+2. Top Memorizers Report:
+   * Content: List of students who have memorized the most new Ayahs/Surahs within a given timeframe.
+   * Purpose: Encourages healthy competition and recognizes high achievers.
+3. Struggling Students Report:
+   * Content: Identifies students who are falling behind, have low memorization rates, or are consistently missing revisions.
+   * Purpose: Allows teachers to provide targeted support and intervention.
+III. Teacher/Admin Reports:
+1. Teacher Workload Report:
+   * Content: Number of students assigned to each teacher, total Ayahs/Surahs reviewed by each teacher, upcoming student assessments.
+   * Purpose: Helps manage teacher assignments and assess workload distribution.
+2. Attendance Report:
+   * Content: Student attendance records for classes or one-on-one sessions.
+   * Purpose: Tracks student engagement and consistency.
+3. Assessment/Test Results Report:
+   * Content: Scores or evaluations from student quarterly test before parent conferences.
+   * Purpose: Measures comprehension and identifies areas where students struggle collectively.
+4. Overall Program Statistics:
+   * Content: Total number of students, total Ayahs/Surahs memorized across all students, average memorization time for the entire Quran (if applicable), retention rates.
+   * Purpose: Provides a macroscopic view of the program's effectiveness and reach.
+IV. Custom/Ad-Hoc Reports:
+1. Filterable Student List:
+   * Content: Allow filtering students by various criteria (e.g., gender, age group, current Juz, teacher, enrollment date).
+   * Purpose: Provides flexibility for specific queries not covered by predefined reports.
+2. Memorization Goals vs. Actual Progress:
+   * Content: Compares each student's set memorization goals with their actual progress.
+   * Purpose: Helps students and teachers track if goals are being met and adjust if necessary
+V. Student Monthly Points
+Point System:
+* New Work Pass: 1 point
+* Front Work Pass: 1 point
+* Back Work Pass: 1 point
+* Extra Work Pass: 1 point
+* Attendance: 1 point
+* Behavior: 1 point
+Report Details: View students' total monthly points and their average against the "Fun Day" point target..
+Purpose: Evaluate if monthly point requirements are realistic and track student performance relative to the monthly “Fun Day” point target.
+
+
+VI: Keep track of homework passes

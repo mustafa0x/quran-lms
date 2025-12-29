@@ -1,0 +1,35 @@
+[tools]
+node = '24'
+python = '3.14'
+uv = 'latest'
+lefthook = 'latest'
+
+[tasks.dev]
+depends = ['dev-api', 'dev-client']
+alias = 'default'
+
+[tasks.dev-client]
+run = 'pnpm --color run dev'
+
+[tasks.dev-api]
+env = { FORCE_COLOR = '1' }
+run = 'nanodjango run api.py 127.0.0.1:$API_PORT'
+
+[tasks.svcheck]
+run = '''
+uv run https://raw.githubusercontent.com/mustafa0x/util/main/svcheck.py
+CHANGED=$(git diff --diff-filter=d --name-only HEAD)
+[ -z "$CHANGED" ] || pnpm exec eslint --fix $CHANGED
+'''
+
+[settings]
+python.uv_venv_auto = true
+
+[env]
+VITE_PORT = 5020
+API_PORT = 8005
+API_WORKERS = 4
+
+VITE_RENDER_SCAN_ON = ''
+
+MISE_UNIX_DEFAULT_INLINE_SHELL_ARGS = 'bash -euo pipefail -c'

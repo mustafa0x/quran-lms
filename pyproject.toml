@@ -1,0 +1,53 @@
+[project]
+name = "sv-nanodjango"
+version = "0.1.0"
+description = ""
+authors = []
+requires-python = ">=3.14,<3.15"
+readme = "readme.md"
+
+dependencies = [
+    "granian[reload]>=2.5.6",
+    "nanodjango>=0.12.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=9.6.0",
+    "pyright>=1.1.407",
+    "pytest>=8.4.2",
+    "rich>=14.2.0",
+    "ruff>=0.14.3",
+]
+
+[tool.uv]
+package = false
+
+# ruff
+[tool.ruff]
+fix = true
+line-length = 130
+src = ["api.py"]
+target-version = "py313"
+extend-exclude = ["migrations"]
+force-exclude = true
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle
+    "F",   # Pyflakes
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+    "I",   # isort
+]
+ignore = [
+    "ERA001", # Found commented-out code
+    "G004",   # Logging statement uses f-string
+    "E731",   # Do not assign a lambda expression, use a def
+]
+
+[tool.ruff.format]
+quote-style = "single"
+line-ending = "lf"
+indent-style = "space"

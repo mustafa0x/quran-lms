@@ -1,0 +1,154 @@
+@font-face {
+  font-family: Kitab;
+  src: url(https://fonts.nuqayah.com/kitab-base.woff2?v4);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC,
+    U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+}
+@font-face {
+  font-family: Kitab;
+  src: url(https://fonts.nuqayah.com/kitab-base-bold.woff2?v4);
+  font-weight: 700;
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC,
+    U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+}
+@font-face {
+  font-family: Kitab;
+  src: url(https://fonts.nuqayah.com/kitab-phrases.woff2?v4);
+  unicode-range: U+6DE, U+6E9, U+E100-E103, U+FD3E-FD45, U+FD47-FD4F, U+FDFA-FDFB, U+FDFD-FDFF;
+}
+@font-face {
+  font-family: Kitab;
+  src: url(https://fonts.nuqayah.com/kitab-phrases.woff2?v4);
+  font-weight: 700;
+  unicode-range: U+6DE, U+6E9, U+E100-E103, U+FD3E-FD45, U+FD47-FD4F, U+FDFA-FDFB, U+FDFD-FDFF;
+}
+@font-face {
+  font-family: Noto;
+  src: url(https://notofonts.github.io/arabic/fonts/NotoNaskhArabic/unhinted/variable-ttf/NotoNaskhArabic[wght].ttf);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC,
+    U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+}
+/* needed for ios */
+@font-face {
+  font-family: Noto;
+  src: url(https://notofonts.github.io/arabic/fonts/NotoNaskhArabic/unhinted/variable-ttf/NotoNaskhArabic[wght].ttf);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC,
+    U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
+}
+/* needed for ios */
+@font-face {
+  font-family: Noto;
+  src: url(https://notofonts.github.io/arabic/fonts/NotoNaskhArabic/unhinted/variable-ttf/NotoNaskhArabic[wght].ttf);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC,
+    U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+  font-weight: 700;
+  font-variation-settings: 'wght' 700;
+}
+@font-face {
+  font-family: SafariFakeFont;
+  src: local('Arial');
+  unicode-range: U+0;
+}
+
+@layer base {
+  html {
+    font-size: 22px;
+  }
+  @media (max-width: 992px) {
+    html {
+      font-size: 21px;
+    }
+  }
+  @media (max-width: 768px) {
+    html {
+      font-size: 18.5px;
+    }
+  }
+  @media (max-width: 576px) {
+    html {
+      font-size: 17px;
+    }
+  }
+
+  html[dir='rtl'] {
+    font-family: SafariFakeFont, Noto, system-ui, sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    overscroll-behavior-y: contain;
+  }
+
+  html.safari body {
+    width: 100%;
+    /* position: fixed; */
+    /* overflow: hidden; */
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  html.safari button:active {
+    color: inherit;
+  }
+  html.user-is-tabbing button {
+    outline: revert;
+  }
+  label,
+  select,
+  input[type='range'] {
+    cursor: pointer;
+  }
+  html.ios input,
+  html.ios select,
+  html.ios textarea {
+    font-size: 16px !important;
+  }
+  input[type='email'],
+  input[type='number'],
+  input[type='password'] {
+    direction: ltr;
+  }
+  ::placeholder {
+    color: #bbb;
+  }
+
+  mark {
+    color: red;
+    font-weight: bold;
+    background: none;
+  }
+
+  #app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+    padding: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    main {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    main {
+      padding: 2rem;
+    }
+  }
+}
