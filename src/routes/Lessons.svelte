@@ -218,10 +218,12 @@
 <script>
 import CalendarIcon from '@lucide/svelte/icons/calendar'
 import PlusIcon from '@lucide/svelte/icons/plus'
-
 import {toast} from 'svelte-sonner'
 
 import {api_get, api_request} from '$lib/api.js'
+import DataTable from '$lib/components/data-table.svelte'
+import PageHeader from '$lib/components/page-header.svelte'
+import StatusBadge, {get_rating_status_type} from '$lib/components/status-badge.svelte'
 import {format_date_input} from '$lib/date.js'
 import {SURAH_NAMES} from '$lib/quran.js'
 import {Button} from '$ui/button/index.js'
@@ -233,9 +235,6 @@ import * as Select from '$ui/select/index.js'
 import {Switch} from '$ui/switch/index.js'
 import * as Tabs from '$ui/tabs/index.js'
 import {Textarea} from '$ui/textarea/index.js'
-import DataTable from '$lib/components/data-table.svelte'
-import PageHeader from '$lib/components/page-header.svelte'
-import StatusBadge, {get_rating_status_type} from '$lib/components/status-badge.svelte'
 
 let lessons = $state([])
 let students = $state([])

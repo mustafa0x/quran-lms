@@ -1,6 +1,6 @@
 <script>
-import * as Table from '$ui/table/index.js'
 import {Skeleton} from '$ui/skeleton/index.js'
+import * as Table from '$ui/table/index.js'
 
 let {
     columns = [],

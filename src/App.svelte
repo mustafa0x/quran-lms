@@ -59,9 +59,9 @@ import {ModeWatcher} from 'mode-watcher'
 import {RenderScan} from 'svelte-render-scan'
 import {Toaster} from 'svelte-sonner'
 
+import NotFound from '~/routes/NotFound.svelte'
 import AppSidebar from '$lib/components/app-sidebar.svelte'
 import ThemeToggle from '$lib/components/theme-toggle.svelte'
-import NotFound from '~/routes/NotFound.svelte'
 import * as Sidebar from '$ui/sidebar/index.js'
 
 const {Component, route_data, is_404} = $props()

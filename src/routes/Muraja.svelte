@@ -167,17 +167,16 @@ import AlertTriangleIcon from '@lucide/svelte/icons/alert-triangle'
 import CheckCircleIcon from '@lucide/svelte/icons/check-circle'
 import ClockIcon from '@lucide/svelte/icons/clock'
 import RefreshIcon from '@lucide/svelte/icons/refresh-cw'
-
 import {toast} from 'svelte-sonner'
 
 import {api_get, api_request} from '$lib/api.js'
-import {get_muraja_daily_load} from '$lib/quran.js'
-import {Button} from '$ui/button/index.js'
-import * as Card from '$ui/card/index.js'
 import DataTable from '$lib/components/data-table.svelte'
 import PageHeader from '$lib/components/page-header.svelte'
 import ProgressRing from '$lib/components/progress-ring.svelte'
 import StatusBadge, {get_muraja_status_type} from '$lib/components/status-badge.svelte'
+import {get_muraja_daily_load} from '$lib/quran.js'
+import {Button} from '$ui/button/index.js'
+import * as Card from '$ui/card/index.js'
 
 let muraja_schedules = $state([])
 let is_loading = $state(true)

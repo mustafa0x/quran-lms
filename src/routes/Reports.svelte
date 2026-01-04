@@ -513,12 +513,12 @@ import TrendingUpIcon from '@lucide/svelte/icons/trending-up'
 import UsersIcon from '@lucide/svelte/icons/users'
 
 import {api_get} from '$lib/api.js'
-import {Button} from '$ui/button/index.js'
-import * as Card from '$ui/card/index.js'
-import * as Tabs from '$ui/tabs/index.js'
 import DataTable from '$lib/components/data-table.svelte'
 import PageHeader from '$lib/components/page-header.svelte'
 import StatusBadge from '$lib/components/status-badge.svelte'
+import {Button} from '$ui/button/index.js'
+import * as Card from '$ui/card/index.js'
+import * as Tabs from '$ui/tabs/index.js'
 
 let stats = $state(null)
 let students = $state([])

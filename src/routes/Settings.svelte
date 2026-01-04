@@ -110,11 +110,11 @@ import SettingsIcon from '@lucide/svelte/icons/settings'
 import SunIcon from '@lucide/svelte/icons/sun'
 
 import {appstate} from '~/store.svelte.js'
+import PageHeader from '$lib/components/page-header.svelte'
 import {Button} from '$ui/button/index.js'
 import * as Card from '$ui/card/index.js'
 import {Input} from '$ui/input/index.js'
 import {Label} from '$ui/label/index.js'
-import PageHeader from '$lib/components/page-header.svelte'
 
 const theme = $derived($appstate.theme)
 const fun_day_target = $derived($appstate.fun_day_target)

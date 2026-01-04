@@ -185,14 +185,14 @@ import MedalIcon from '@lucide/svelte/icons/medal'
 import StarIcon from '@lucide/svelte/icons/star'
 import TrophyIcon from '@lucide/svelte/icons/trophy'
 
-import {api_get} from '$lib/api.js'
-import {add_months, format_month_key, format_month_year} from '$lib/date.js'
 import {appstate} from '~/store.svelte.js'
+import {api_get} from '$lib/api.js'
+import DataTable from '$lib/components/data-table.svelte'
+import PageHeader from '$lib/components/page-header.svelte'
+import {add_months, format_month_key, format_month_year} from '$lib/date.js'
 import {Button} from '$ui/button/index.js'
 import * as Card from '$ui/card/index.js'
 import {Skeleton} from '$ui/skeleton/index.js'
-import DataTable from '$lib/components/data-table.svelte'
-import PageHeader from '$lib/components/page-header.svelte'
 
 let current_month = $state(new Date())
 let points_data = $state([])

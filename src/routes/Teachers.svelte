@@ -182,18 +182,17 @@ import PlusIcon from '@lucide/svelte/icons/plus'
 import SearchIcon from '@lucide/svelte/icons/search'
 import TrashIcon from '@lucide/svelte/icons/trash-2'
 import UsersIcon from '@lucide/svelte/icons/users'
-
 import {toast} from 'svelte-sonner'
 
 import {api_get, api_request} from '$lib/api.js'
+import DataTable from '$lib/components/data-table.svelte'
+import PageHeader from '$lib/components/page-header.svelte'
 import * as AlertDialog from '$ui/alert-dialog/index.js'
 import {Button} from '$ui/button/index.js'
 import * as Card from '$ui/card/index.js'
 import * as Dialog from '$ui/dialog/index.js'
 import {Input} from '$ui/input/index.js'
 import {Label} from '$ui/label/index.js'
-import DataTable from '$lib/components/data-table.svelte'
-import PageHeader from '$lib/components/page-header.svelte'
 
 let teachers = $state([])
 let teacher_students = $state([])

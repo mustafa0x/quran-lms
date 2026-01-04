@@ -186,12 +186,12 @@ import TrendingUpIcon from '@lucide/svelte/icons/trending-up'
 import UsersIcon from '@lucide/svelte/icons/users'
 
 import {api_get} from '$lib/api.js'
-import * as Card from '$ui/card/index.js'
-import {Skeleton} from '$ui/skeleton/index.js'
 import PageHeader from '$lib/components/page-header.svelte'
 import ProgressRing from '$lib/components/progress-ring.svelte'
 import StatCard from '$lib/components/stat-card.svelte'
 import StatusBadge, {get_muraja_status_type} from '$lib/components/status-badge.svelte'
+import * as Card from '$ui/card/index.js'
+import {Skeleton} from '$ui/skeleton/index.js'
 
 let stats = $state(null)
 let stats_loading = $state(true)

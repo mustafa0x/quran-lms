@@ -610,10 +610,13 @@ import EyeIcon from '@lucide/svelte/icons/eye'
 import PlusIcon from '@lucide/svelte/icons/plus'
 import SearchIcon from '@lucide/svelte/icons/search'
 import TrashIcon from '@lucide/svelte/icons/trash-2'
-
 import {toast} from 'svelte-sonner'
 
 import {api_get, api_request} from '$lib/api.js'
+import DataTable from '$lib/components/data-table.svelte'
+import PageHeader from '$lib/components/page-header.svelte'
+import ProgressRing from '$lib/components/progress-ring.svelte'
+import StatusBadge, {get_rating_status_type, get_student_status_type} from '$lib/components/status-badge.svelte'
 import {format_date_input} from '$lib/date.js'
 import * as AlertDialog from '$ui/alert-dialog/index.js'
 import {Button} from '$ui/button/index.js'
@@ -624,10 +627,6 @@ import {Label} from '$ui/label/index.js'
 import * as Select from '$ui/select/index.js'
 import {Skeleton} from '$ui/skeleton/index.js'
 import {Textarea} from '$ui/textarea/index.js'
-import DataTable from '$lib/components/data-table.svelte'
-import PageHeader from '$lib/components/page-header.svelte'
-import ProgressRing from '$lib/components/progress-ring.svelte'
-import StatusBadge, {get_rating_status_type, get_student_status_type} from '$lib/components/status-badge.svelte'
 
 let students = $state([])
 let teachers = $state([])

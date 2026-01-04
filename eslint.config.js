@@ -4,7 +4,6 @@ import eslintPluginImportX from 'eslint-plugin-import-x'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import svelte from 'eslint-plugin-svelte'
 import globals from 'globals'
-import ts from 'typescript-eslint'
 
 /** @param {string} s */
 const prep_globals = s => Object.fromEntries(s.split(' ').map(g => [g, 'readonly']))
@@ -14,14 +13,13 @@ const globals_all = {
 
 export default defineConfig(
     js.configs.recommended,
-    ...ts.configs.recommended,
     ...svelte.configs.recommended,
     {
         ignores: [
-            ...'node_modules,dist,dist-native,android,ios,public,.venv,misc'
+            ...'node_modules,dist,dist-native,android,ios,public,misc,.venv,src/lib/components/ui/'
                 .split(',')
                 .map(x => x + '/**/*'),
-            '**/*.d.ts',
+            '**/*.svelte.ts',
         ],
     },
     {
@@ -29,16 +27,11 @@ export default defineConfig(
             'no-empty': ['error', {allowEmptyCatch: true}],
             'no-misleading-character-class': 'off',
             'svelte/prefer-svelte-reactivity': 'off',
-            '@typescript-eslint/ban-ts-comment': 'off',
-            '@typescript-eslint/no-explicit-any': 'off',
-            '@typescript-eslint/no-unused-vars': [
-                'error',
-                {argsIgnorePattern: '^_', varsIgnorePattern: '^_'},
-            ],
+            'no-unused-vars': ['error', {argsIgnorePattern: '^_', varsIgnorePattern: '^_'}],
         },
     },
     {
-        files: ['src/**/*.js', 'src/**/*.ts'],
+        files: ['src/**/*.js'],
         languageOptions: {
             globals: {...globals.es2021, ...globals.browser, ...globals_all},
         },
@@ -50,13 +43,8 @@ export default defineConfig(
         },
     },
     {
-        files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
+        files: ['**/*.svelte', '**/*.svelte.js'],
         languageOptions: {
-            parserOptions: {
-                projectService: true,
-                extraFileExtensions: ['.svelte'],
-                parser: ts.parser,
-            },
             globals: {...globals.es2021, ...globals.browser, ...globals_all},
         },
     },
@@ -70,10 +58,9 @@ export default defineConfig(
         },
     },
     {
-        ignores: ['src/lib/components/ui/**/*'],
         plugins: {
             'simple-import-sort': simpleImportSort,
-            'import-x': /** @type {any} */ (eslintPluginImportX),
+            'import-x': eslintPluginImportX,
         },
         rules: {
             'simple-import-sort/imports': 'error',
